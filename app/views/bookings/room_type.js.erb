@@ -1,0 +1,6 @@
+<% if @guest %>
+$('#bookings-form').html("<%= escape_javascript (render partial: 'bookings/form_with_guest') %>");
+<% else %>
+  $('#bookings-form').html("<%= escape_javascript (render partial: 'bookings/form') %>");
+<% end %>
+$("#room-type-dropdown").val("<%= @room_type %>")

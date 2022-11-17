@@ -1,0 +1,16 @@
+<%= simple_form_for @room, html: { "data-turbo": false } do |f| %>
+  <div class="col-12 mt-3">
+    <label class="form-label">Room Type</label>
+      <%= f.input :room_type, as: :select, collection: ["One BHK", "Two BHK", "Three BHK"], input_html: { class: "form-control" }, include_blank: "Select room type", label: false %>
+  </div>
+
+  <div class="col-12 mt-3">
+    <label class="form-label">Room No</label>
+      <%= f.input :room_no, input_html: { class: "form-control" }, label: false %>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-md-1">  <a href="/rooms" class="btn btn-primary">Back</a> </div>
+    <div class="col-md-2">  <%= f.button :submit, class: "btn btn-primary" %> </div>
+  </div>
+<% end %>

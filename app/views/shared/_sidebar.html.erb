@@ -1,0 +1,28 @@
+<aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link <%= "collapsed" if request.fullpath.split("/")[1] != "rooms" %>" href="/rooms">
+        <i class="bi bi-grid"></i>
+        <span>Rooms</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link <%= "collapsed" if request.fullpath.split("/")[1] != "guests" %>" href="/guests">
+        <i class="bi bi-grid"></i>
+        <span>Guests</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link <%= "collapsed" if request.fullpath.split("/")[1] != "bookings" %>" href="/bookings">
+        <i class="bi bi-grid"></i>
+        <span>Bookings</span>
+      </a>
+    </li>
+
+  </ul>
+
+</aside>
